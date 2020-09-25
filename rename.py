@@ -2,8 +2,8 @@ from tkinter import *
 
 master = Tk()
 
-MatSizeX = 56
-MatSizeY = 56
+MatSizeX = 11
+MatSizeY = 11
 
 
 def initWindow(canWidth, canHeight):
@@ -24,5 +24,5 @@ def initWindow(canWidth, canHeight):
         w.create_line(X, begY, X, endY, fill="#476042")
 
 
-initWindow(10, 10)
+initWindow(60, 60)
 mainloop()
