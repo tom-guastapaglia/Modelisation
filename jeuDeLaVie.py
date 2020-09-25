@@ -61,8 +61,9 @@ while(a < 12):
     print(t);
     a = a +1;
 """
-
+"""
 for i in range(0,12):
     t = iterations(t);
     print(t);
     time.sleep(3);
+"""
