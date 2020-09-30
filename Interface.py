@@ -54,6 +54,8 @@ color_case(t, w, canHeight)
 time.sleep(300)
 w.delete('all')
 refreshGrille(w, canWidth, canHeight)
+iterations(t)
+
 
 
 #for i in range(0,12):
@@ -61,5 +63,4 @@ refreshGrille(w, canWidth, canHeight)
 #    color_case(t, w, canHeight)
 #    time.sleep(3)
 #w.create_line(50, 50, 100, 50, fill="#476042")
-
-mainloop()
+#mainloop()

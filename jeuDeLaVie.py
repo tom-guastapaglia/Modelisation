@@ -7,12 +7,13 @@ t=np.zeros((11,11));
 
 
 
-t[5,5]=1;
-t[5,4]=1;
-t[5,6]=1;
-t[4,5]=1;
-t[6,5]=1;
-print(t);
+t[5,5]=1
+t[5,4]=1
+t[5,6]=1
+t[4,5]=1
+t[6,5]=1
+print(t)
+
 def compteurVoisins(mat, i, j):
     compteur = 0;
     rows, cols = mat.shape;
@@ -45,7 +46,7 @@ def iterations(t):
                 temp[i,j] = 1;
             else:
                 temp[i,j] = 0;
-    #print(temp);
+    print(temp);
     return temp;
 
 """
