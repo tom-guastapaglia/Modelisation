@@ -1,6 +1,7 @@
 from tkinter import *
 from jeuDeLaVie import *
 
+
 master = Tk()
 
 MatSizeX = 11
@@ -49,9 +50,10 @@ w = initWindow(canWidth,canHeight)
 refreshGrille(w, canWidth, canHeight)
 color_case(t, w, canHeight)
 for i in range(0,12):
+    iterations(t)
     refreshGrille(w, canWidth, canHeight)
     color_case(t, w, canHeight)
-    iterations(t)
+    time.sleep(3)
 #w.create_line(50, 50, 100, 50, fill="#476042")
 
 mainloop()
