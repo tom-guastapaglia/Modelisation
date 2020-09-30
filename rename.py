@@ -32,15 +32,6 @@ def refreshGrille(w,canWidth, canHeight):
         w.create_line(X, begY, X, endY, fill="#476042")
 
 
-
-def color_case(mat, w, canHeight):
-    pas = canHeight+1
-    rows, cols = t.shape
-    for i in range (0,rows):
-        for j in range(0, cols):
-            if (t[i,j]==0):
-                w.create_rectangle(pas*i,pas*j,pas*i+1,pas*j+1)
-
 w = initWindow(canWidth,canHeight)
 refreshGrille(w, canWidth, canHeight)
 #w.create_line(50, 50, 100, 50, fill="#476042")
