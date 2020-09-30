@@ -1,7 +1,5 @@
 from tkinter import *
 from jeuDeLaVie import *
-import time
-
 
 master = Tk()
 
@@ -35,32 +33,8 @@ def refreshGrille(w,canWidth, canHeight):
         w.create_line(X, begY, X, endY, fill="#476042")
 
 
-
-def color_case(t, w, canHeight):
-    pas = canHeight+1
-    rows, cols = t.shape
-    for i in range (0,rows):
-        for j in range(0, cols):
-            if (t[i,j]==1):
-                w.create_rectangle(pas*i,pas*j,pas*i+pas,pas*j+pas,fill='black')
-
-
-
-
-
 w = initWindow(canWidth,canHeight)
 refreshGrille(w, canWidth, canHeight)
-color_case(t, w, canHeight)
-time.sleep(300)
-w.delete('all')
-refreshGrille(w, canWidth, canHeight)
-iterations(t)
-
-
-
-#for i in range(0,12):
-#    refreshGrille(w, canWidth, canHeight)
-#    color_case(t, w, canHeight)
-#    time.sleep(3)
 #w.create_line(50, 50, 100, 50, fill="#476042")
-#mainloop()
+
+mainloop()
