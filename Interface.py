@@ -1,5 +1,8 @@
 from tkinter import *
 from jeuDeLaVie import *
+from time import sleep
+
+
 
 master = Tk()
 
@@ -42,16 +45,25 @@ def color_case(t, w, canHeight):
             if (t[i,j]==1):
                 w.create_rectangle(pas*i,pas*j,pas*i+pas,pas*j+pas,fill='black')
 
-
+def boucle(w, t, canWidth, canHeight, iter):
+    for i in range(0, iter):
+        w.update()
+        w.delete('all')
+        w.after(300, refreshGrille(w, canWidth, canHeight))
+        t = iterations(t)
+        color_case(t, w, canHeight)
 
 
 w = initWindow(canWidth,canHeight)
 refreshGrille(w, canWidth, canHeight)
 color_case(t, w, canHeight)
-for i in range(0,12):
-    refreshGrille(w, canWidth, canHeight)
-    color_case(t, w, canHeight)
-    iterations(t)
-#w.create_line(50, 50, 100, 50, fill="#476042")
+w.update()
+boucle(w, t, canWidth, canHeight, 11)
 
 mainloop()
+
+
+
+#w.create_line(50, 50, 100, 50, fill="#476042")
+
+
