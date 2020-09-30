@@ -3,13 +3,16 @@ from jeuDeLaVie import *
 from time import sleep
 
 
-
 master = Tk()
 
-MatSizeX = 11
-MatSizeY = 11
-canWidth = 60
-canHeight = 60
+MatSizeX = master.winfo_screenwidth()
+MatSizeY = master.winfo_screenheight()
+canWidth = 10
+canHeight = 10
+
+
+#def initialisation_jeu():
+
 
 
 def initWindow(canWidth, canHeight):
@@ -18,6 +21,9 @@ def initWindow(canWidth, canHeight):
     w = Canvas(master, width=widthW, height=heightW)
     w.pack()
     return w
+
+
+
 
 
 def refreshGrille(w,canWidth, canHeight):

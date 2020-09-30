@@ -1,9 +1,10 @@
-import numpy as np;
-import time;
+import numpy as np
+import time
 import os
 
 
-t=np.zeros((11,11));
+t=np.zeros((11,11))
+
 
 
 
@@ -12,6 +13,8 @@ t[5,4]=1
 t[5,6]=1
 t[4,5]=1
 t[6,5]=1
+
+
 print(t)
 
 def compteurVoisins(mat, i, j):
